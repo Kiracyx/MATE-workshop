@@ -1,0 +1,1 @@
+BOSE-mate-academy workshop
