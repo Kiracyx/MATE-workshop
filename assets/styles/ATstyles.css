@@ -1,0 +1,797 @@
+/* #region media 1260px */
+@media screen and (max-width: 1260px) {
+  html {
+    scroll-behavior: smooth;
+    width: 1260px;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    /* align-items: center; */
+  }
+
+  /* #region header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 64px 120px;
+    background: url(../images/svg/img1_header.svg) center/cover no-repeat;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    transform: translate();
+  }
+
+  .header__title {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-top: 40px;
+  }
+  /* #endregion */
+
+  /* #region menu */
+  .menu {
+    background: #e8eff9;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 64px 120px 384px;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальное положение за пределами экрана */
+    width: 100%;
+    height: 100vh;
+    transition: left 0.8s ease; /* Добавляем плавную анимацию */
+  }
+
+  .menu.active {
+    left: 0; /* Показываем блок меню */
+    width: 1260px;
+  }
+
+  .menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  .menu__link {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #292929;
+  }
+
+  .menu__nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .menu__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: #990b0b;
+  }
+
+  #burger-menu,
+  #close-menu {
+    cursor: pointer;
+  }
+
+  #burger-menu:hover {
+    mask-image: url(../images/icons/img6_burg_m_hover.svg);
+  }
+
+  #close-menu:hover {
+    /* transform: rotate(1turn); */
+    transform: rotate3d(100, 50, 40, 360deg);
+    transition: 1s ease-in-out;
+  }
+  /* #endregion */
+
+  /* #region main */
+  .main {
+    padding: 120px 0;
+  }
+
+  /* Section recommended */
+  .recommended {
+    margin-bottom: 120px;
+  }
+
+  .main__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-bottom: 64px;
+  }
+
+  .recommended__product {
+    display: flex;
+    justify-content: center;
+  }
+
+  .recommended__product-items.center__item {
+    margin: 0 24px;
+  }
+  .recommended__subtitle {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 8px;
+  }
+
+  .recommended__subtext {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 12px;
+  }
+
+  .recommended__price {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+  }
+
+  /* Section categories */
+  .categories {
+    margin-bottom: 120px;
+  }
+
+  .categories__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories__product-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .categories__photo {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .categories__product-items.center__item {
+    margin: 64px 0;
+  }
+
+  .categories__subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: #292929;
+
+    margin-top: 16px;
+  }
+
+  /* Section how-to-buy */
+  .how-to-buy {
+    display: flex;
+    justify-content: center;
+    gap: 111px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  .main__title.how-to-buy__title {
+    width: 100%;
+    min-width: 411px;
+    text-align: start;
+  }
+
+  .how-to-buy__info {
+    width: 100%;
+    min-width: 498px;
+  }
+
+  .how-to-buy__info-title {
+    margin-bottom: 40px;
+  }
+
+  .recommended__subtitle:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .recommended__subtext.how-to-buy__subtext {
+    margin-bottom: 0px;
+  }
+  /* #endregion */
+
+  /* #region footer */
+  .footer {
+    display: flex;
+
+    width: 1260px;
+    height: 50vh;
+    background: url(../images/svg/img2_footer.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50vh;
+    background-size: cover;
+
+    position: relative;
+  }
+  /* #endregion */
+}
+/* #endregion */
+
+/* #region media 744px */
+@media screen and (max-width: 744px) {
+  html {
+    scroll-behavior: smooth;
+    width: 744px;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    /* align-items: center; */
+  }
+
+  /* #region header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 64px 120px;
+    background: url(../images/svg/img1_header.svg) center/cover no-repeat;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    transform: translate();
+  }
+
+  .header__title {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-top: 40px;
+  }
+  /* #endregion */
+
+  /* #region menu */
+  .menu {
+    background: #e8eff9;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 64px 120px 384px;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальное положение за пределами экрана */
+    width: 100%;
+    height: 100vh;
+    transition: left 0.8s ease; /* Добавляем плавную анимацию */
+  }
+
+  .menu.active {
+    left: 0; /* Показываем блок меню */
+    width: 744px;
+  }
+
+  .menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  .menu__link {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #292929;
+  }
+
+  .menu__nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .menu__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: #990b0b;
+  }
+
+  #burger-menu,
+  #close-menu {
+    cursor: pointer;
+  }
+
+  #burger-menu:hover {
+    mask-image: url(../images/icons/img6_burg_m_hover.svg);
+  }
+
+  #close-menu:hover {
+    /* transform: rotate(1turn); */
+    transform: rotate3d(100, 50, 40, 360deg);
+    transition: 1s ease-in-out;
+  }
+  /* #endregion */
+
+  /* #region main */
+  .main {
+    padding: 120px 0;
+  }
+
+  /* Section recommended */
+  .recommended {
+    margin-bottom: 120px;
+  }
+
+  .main__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-bottom: 64px;
+  }
+
+  .recommended__product {
+    display: flex;
+    justify-content: center;
+  }
+
+  .recommended__product-items.center__item {
+    margin: 0 24px;
+  }
+  .recommended__subtitle {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 8px;
+  }
+
+  .recommended__subtext {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 12px;
+  }
+
+  .recommended__price {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+  }
+
+  /* Section categories */
+  .categories {
+    margin-bottom: 120px;
+  }
+
+  .categories__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories__product-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .categories__photo {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .categories__product-items.center__item {
+    margin: 64px 0;
+  }
+
+  .categories__subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: #292929;
+
+    margin-top: 16px;
+  }
+
+  /* Section how-to-buy */
+  .how-to-buy {
+    display: flex;
+    justify-content: center;
+    gap: 111px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  .main__title.how-to-buy__title {
+    width: 100%;
+    min-width: 411px;
+    text-align: start;
+  }
+
+  .how-to-buy__info {
+    width: 100%;
+    min-width: 498px;
+  }
+
+  .how-to-buy__info-title {
+    margin-bottom: 40px;
+  }
+
+  .recommended__subtitle:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .recommended__subtext.how-to-buy__subtext {
+    margin-bottom: 0px;
+  }
+  /* #endregion */
+
+  /* #region footer */
+  .footer {
+    display: flex;
+
+    width: 100%;
+    height: 50vh;
+    background: url(../images/svg/img2_footer.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50vh;
+    background-size: cover;
+
+    position: relative;
+  }
+  /* #endregion */
+}
+/* #endregion */
+
+/* #region media 320px */
+@media screen and (max-width: 744px) {
+  html {
+    scroll-behavior: smooth;
+    width: 744px;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+    width: 100%;
+    /* align-items: center; */
+  }
+
+  /* #region header */
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 64px 120px;
+    background: url(../images/svg/img1_header.svg) center/cover no-repeat;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    transform: translate();
+  }
+
+  .header__title {
+    font-family: "Inter";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-top: 40px;
+  }
+  /* #endregion */
+
+  /* #region menu */
+  .menu {
+    background: #e8eff9;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding: 64px 120px 384px;
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальное положение за пределами экрана */
+    width: 100%;
+    height: 100vh;
+    transition: left 0.8s ease; /* Добавляем плавную анимацию */
+  }
+
+  .menu.active {
+    left: 0; /* Показываем блок меню */
+    width: 744px;
+  }
+
+  .menu__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  .menu__link {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #292929;
+  }
+
+  .menu__nav-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .menu__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    color: #990b0b;
+  }
+
+  #burger-menu,
+  #close-menu {
+    cursor: pointer;
+  }
+
+  #burger-menu:hover {
+    mask-image: url(../images/icons/img6_burg_m_hover.svg);
+  }
+
+  #close-menu:hover {
+    /* transform: rotate(1turn); */
+    transform: rotate3d(100, 50, 40, 360deg);
+    transition: 1s ease-in-out;
+  }
+  /* #endregion */
+
+  /* #region main */
+  .main {
+    padding: 120px 0;
+  }
+
+  /* Section recommended */
+  .recommended {
+    margin-bottom: 120px;
+  }
+
+  .main__title {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    color: #292929;
+    margin-bottom: 64px;
+  }
+
+  .recommended__product {
+    display: flex;
+    justify-content: center;
+  }
+
+  .recommended__product-items.center__item {
+    margin: 0 24px;
+  }
+  .recommended__subtitle {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 8px;
+  }
+
+  .recommended__subtext {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+    margin-bottom: 12px;
+  }
+
+  .recommended__price {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #292929;
+  }
+
+  /* Section categories */
+  .categories {
+    margin-bottom: 120px;
+  }
+
+  .categories__product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categories__product-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .categories__photo {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .categories__product-items.center__item {
+    margin: 64px 0;
+  }
+
+  .categories__subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+
+    color: #292929;
+
+    margin-top: 16px;
+  }
+
+  /* Section how-to-buy */
+  .how-to-buy {
+    display: flex;
+    justify-content: center;
+    gap: 111px;
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+
+  .main__title.how-to-buy__title {
+    width: 100%;
+    min-width: 411px;
+    text-align: start;
+  }
+
+  .how-to-buy__info {
+    width: 100%;
+    min-width: 498px;
+  }
+
+  .how-to-buy__info-title {
+    margin-bottom: 40px;
+  }
+
+  .recommended__subtitle:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .recommended__subtext.how-to-buy__subtext {
+    margin-bottom: 0px;
+  }
+  /* #endregion */
+
+  /* #region footer */
+  .footer {
+    display: flex;
+
+    width: 100%;
+    height: 50vh;
+    background: url(../images/svg/img2_footer.svg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 50vh;
+    background-size: cover;
+
+    position: relative;
+  }
+  /* #endregion */
+}
+/* #endregion */
